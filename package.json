@@ -1,0 +1,45 @@
+{
+    "name": "@rubentacastro02/nestjs-typedorm",
+    "version": "0.1.1",
+    "description": "NestJS DynamoDB Client ",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "rm -rf dist && tsc -p tsconfig.json",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prepublishOnly": "npm run build",
+        "publish": "npm publish --access public"
+    },
+    "author": "BMO <bmo@skypress.io>",
+    "license": "MIT",
+    "private": false,
+    "devDependencies": {
+        "babel-eslint": "^10.1.0",
+        "eslint": "^8.18.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-config-rokket-labs": "^0.4.11",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "typescript": "^4.7.4"
+    },
+    "peerDependencies": {
+        "@typedorm/common": "^1.14.11",
+        "@typedorm/core": "^1.14.11"
+    },
+    "dependencies": {
+        "@nestjs/common": "^8.4.7",
+        "@typedorm/common": "^1.14.11",
+        "@typedorm/core": "^1.14.11",
+        "aws-sdk": "^2.1159.0",
+        "is-class": "^0.0.9",
+        "reflect-metadata": "^0.1.13",
+        "uuid": "^8.3.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rubentacastro02/nestjs-typedorm.git"
+    },
+    "bugs": {
+        "url": "https://github.com/rubentacastro02/nestjs-typedorm/issues"
+    },
+    "homepage": "https://github.com/rubentacastro02/nestjs-typedorm#readme"
+}
