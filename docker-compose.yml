@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  dynamodb:
+    image: amazon/dynamodb-local
+    command: -jar DynamoDBLocal.jar -sharedDb -dbPath /home/dynamodblocal/data/
+    volumes:
+      - ./.docker/dynamodb-local:/home/dynamodblocal/data
+    environment:
+      - AWS_ACCESS_KEY_ID=aaa
+      - AWS_SECRET_ACCESS_KEY=aaa
+      - AWS_SESSION_TOKEN=aaa
+      - AWS_REGION=eu-west-1
+    ports:
+      - "8000:8000"
+    restart: always
